@@ -34,6 +34,7 @@ nox.options.sessions = (
     "xdoctest",
     "docs-build",
 )
+nox.options.stop_on_first_error = True
 
 
 def activate_virtualenv_in_precommit_hooks(session: Session) -> None:
