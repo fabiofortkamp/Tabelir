@@ -18,5 +18,5 @@ class TabelirApp:
             Path: path to created directory.
         """
         path = Path("Methane")
-        path.mkdir()
+        path.mkdir(exist_ok=True)
         return path
