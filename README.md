@@ -60,7 +60,8 @@ P2,value21,value22,value23
 
 - [CoolProp](http://www.coolprop.org) as the data source
 - Only temperature and gas tables are implemented
-- Only Methane is implemented
+- Only Methane is implemented; if no argument is provided, this is the fluid that is
+  used. All other arguments are ignored.
 
 ## TODO
 
