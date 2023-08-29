@@ -1,0 +1,15 @@
+{
+  "_output_dir": "/home/fabio/Projects",
+  "_repo_dir": "/home/fabio/.cookiecutters/cookiecutter-hypermodern-python",
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "F\u00e1bio P. Fortkamp",
+  "copyright_year": "2023",
+  "development_status": "Development Status :: 1 - Planning",
+  "email": "fabio@fabiofortkamp.com",
+  "friendly_name": "Tabelir",
+  "github_user": "fabiofortkamp",
+  "license": "MIT",
+  "package_name": "tabelir",
+  "project_name": "Tabelir",
+  "version": "0.0.1"
+}
