@@ -21,14 +21,50 @@
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
+## Overview
+
+In many Engineering simulations, engineers need *fluid tables* of various thermophysical
+properties tabulated by pressure and temperature. In even more specific situations,
+properties should be tabulated by pressure and *enthalpy*, allowing them to be extracted
+from the solution of momentum and energy equations.
+
+Tabelir is a fluid tables generator that performs this task. You invoke it with:
+
+```shell
+tabelir "Methane" 
+```
+
+and a new folder called `Methane` is created in the working directory, with lots
+of CSV tables named like this:
+
+- `temperature_GAS_density.csv`
+- `enthalpy_MIXTURE_cp.csv`
+- `temperture_equivLIQUID_viscosity.csv`
+
+where:
+
+- the first string denotes the other parameter (in addition to pressure); 
+- the second string denotes the phase (where `equivLIQUID` is an equivalent, lumped
+    liquid phase)
+- the third string denotes the property that is being tabulated
+
+The table looks like this:
+```csv
+pressure/temperature,T1,T2,T3
+P1,value11,value12,value13
+P2,value21,value22,value23
+```
 ## Features
 
-- TODO
+- [CoolProp](http://www.coolprop.org) as the data source
+- Only temperature and gas tables are implemented
+- Only Methane is implemented
+## TODO
 
-## Requirements
-
-- TODO
-
+- [ ] Generate enthalpy-based tables
+- [ ] Customize range
+- [ ] Implement phase algorithm to calculate all phases
+- [ ] Parse fluid name
 ## Installation
 
 You can install _Tabelir_ via [pip] from [PyPI]:
