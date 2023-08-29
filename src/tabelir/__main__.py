@@ -3,10 +3,10 @@ import click
 
 
 @click.command()
-@click.version_option()
+@click.version_option(message="%(version)s")
 def main() -> None:
-    """Tabelir."""
+    """Tabelir - Create fluid tables."""
 
 
 if __name__ == "__main__":
-    main(prog_name="Tabelir")  # pragma: no cover
+    main()  # pragma: no cover
