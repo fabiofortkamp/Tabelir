@@ -56,19 +56,19 @@ P1,value11,value12,value13
 P2,value21,value22,value23
 ```
 
+Beware that, if a folder called `Methane` (or whatever you passed in the command line)
+exists, it will be overwritten!
+
 ## Features
 
 - [CoolProp](http://www.coolprop.org) as the data source
-- Only temperature and gas tables are implemented
-- Only Methane is implemented; if no argument is provided, this is the fluid that is
-  used. All other arguments are ignored.
 
 ## TODO
 
 - [ ] Generate enthalpy-based tables
 - [ ] Customize range
-- [ ] Implement phase algorithm to calculate all phases
-- [ ] Parse fluid name
+- [ ] Make possible to customize output directory
+- [ ] Add guard against existing directory
 
 ## Installation
 
