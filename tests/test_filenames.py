@@ -1,8 +1,10 @@
 """test_filenames.py - Assert that filenames are well formed."""
 import itertools
 
-from tabelir import SecondInput, Phase, ThermophysicalProperty
 import tabelir
+from tabelir import Phase
+from tabelir import SecondInput
+from tabelir import ThermophysicalProperty
 
 
 def test_can_access_second_inputs() -> None:
@@ -23,7 +25,6 @@ def test_can_access_phase() -> None:
 
 def test_can_access_property() -> None:
     """We can access all relevant properties."""
-
     possible_props = {
         ThermophysicalProperty.DENSITY,
         ThermophysicalProperty.CP,

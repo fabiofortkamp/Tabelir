@@ -1,5 +1,8 @@
 """app.py - Main app."""
+import itertools
 from pathlib import Path
+
+import tabelir
 
 
 class TabelirApp:
@@ -15,7 +18,8 @@ class TabelirApp:
 
     def run(self) -> None:
         """Generate tables from input arguments."""
-        self.create_directory()
+        path = self.create_directory()
+        self.create_filenames(path)
 
     def create_directory(
         self,
@@ -28,3 +32,17 @@ class TabelirApp:
         path = Path(self.fluid)
         path.mkdir(exist_ok=True)
         return path
+
+    def create_filenames(self, path: Path) -> None:
+        """Create all relevant files, ready to be populated.
+
+        Args:
+            path (Path): directory where to create files.
+        """
+        phases = list(tabelir.Phase)
+        second_inputs = list(tabelir.SecondInput)
+        properties = list(tabelir.ThermophysicalProperty)
+
+        for phase, si, prop in itertools.product(phases, second_inputs, properties):
+            filename = tabelir.filename_from(si, phase, prop)
+            Path(path / filename).touch()
