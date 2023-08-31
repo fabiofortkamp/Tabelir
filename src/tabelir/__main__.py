@@ -20,7 +20,7 @@ from tabelir import TabelirApp
 )
 def main(fluid: str, output_dir: Path) -> None:
     """Tabelir - Create fluid tables for given FLUID."""
-    app = TabelirApp()
+    app = TabelirApp(fluid)
     app.run()
 
 
