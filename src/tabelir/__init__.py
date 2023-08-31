@@ -60,6 +60,12 @@ def filename_from(si: SecondInput, phase: Phase, prop: ThermophysicalProperty) -
     return f"{si}_{phase}_{prop}.{TABLE_EXTENSION}"
 
 
+# T_values = np.linspace(273.15, 423.15, 50)
+# P_values = np.linspace(1e5, 2e8, 50)
+N_PRESSURE_POINTS = 50
+N_SECOND_INPUT_POINTS = 50
+
+
 __all__ = [
     "TabelirApp",
     "SecondInput",
